@@ -1,0 +1,35 @@
+﻿@model IEnumerable<CourseApp.DataModels.Course>
+
+@{
+    ViewBag.Title = "Available Courses";
+}
+
+<h2>Index</h2>
+<table class="table-responsive table-striped" >
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody id="tableBody">
+        @*@fo reach (var temp in Model)
+        {
+            <tr>
+                <td>@temp.Name</td>
+                <td><button type="button" class="btn btn-danger" onclick="deleteCourse(@temp.Id)">Delete</button></td>
+            </tr>
+            
+
+
+
+        }*@
+    </tbody></table><br />
+<form method="post">
+    <input type="text" name="Name" id="Name" />
+    <button type="submit" class="btn btn-danger" id="Create">Create</button>
+</form>
+
+@section scripts {
+    <script src="~/Scripts/_CourseJS.js"></script>
+}
